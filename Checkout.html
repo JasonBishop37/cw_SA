@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop Now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+</head>
+<body >
+<div id="shop_now"></div>
+    <div id="container">
+        <div class="nav">
+            <img class="media" src="Facebook.png" alt="Facebook">
+            <img class="media" src="Instagram.png" alt="Instagram">
+            <img class="media" src="Twitter.png" alt="Twitter">
+        </div>
+
+        <div id="name">
+            <p class="name">Nkwali</p>
+            <img id="rhino" class="name" src="Rhino.png" alt="Rhino">
+            <p class="name">Yenkosi</p>
+        </div>
+    
+    
+
+    <div class="wrap">
+            <input type="checkbox" class="toggle">
+        <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <ul>
+                    <li><a class="pages" href="home.html">Home</a></li>
+                    <li><a class="pages" href="About the leather.html">About the leather</a></li>
+                    <li><a class="pages" href="DIY Methods.html">DIY Methods</a></li>
+                    <li><a class="pages" href="Brick & Mortar.html">Brick & Mortar</a></li>
+                    <li><a class="pages" href="Shop Now.html">Shop Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<h1  id="text">Just one more step...</h1>
+<p id="text">
+    Before your new Leather Jacket can leave we need you to fill in the following form
+</p>
+
+
+<div id="form">
+<form id="last" action="Thanks.html">
+    <div class="border">
+    <p class="num">1</p>
+    <label for="fname" class="label">Customer Info</label><br><br></div>
+    <input type="text" class="top" id="fname" name="fname" placeholder="Your Full Name *" required><br><br>
+    <input type="email" class="input" id="fname" name="fname" placeholder="Your Email *" required><br><br>
+    <input type="number" class="input" id="fname" name="fname" placeholder="Your Phone Number *" required><br><br>
+
+    <div class="border">
+    <p class="num">2</p>
+    <label for="fname" class="label">Shipping Details</label><br><br></div>
+
+    <input type="text" class="top" id="fname" name="fname" placeholder="Your Street Number and Name *" required><br><br>
+    <input type="text" class="input" id="fname" name="fname" placeholder="Your City *" required><br><br>
+    <input type="text" class="input" id="fname" name="fname" placeholder="Your Suburb *" required><br><br>
+    
+    <label for="fname" >Province</label><br><br>
+    <input type="text" class="input" id="fname" name="fname" placeholder="Gauteng *" required><br><br>
+    <input type="number" class="input" id="fname" name="fname" placeholder="Your ZIP Code *" required><br><br>
+    
+    <textarea name="" id="Special" cols="30" rows="10" onclick="this.select()">Special Instructions *</textarea><br><br>
+    
+    <div class="border">
+    <p class="num">3</p>
+    <label for="fname"class="label">Billing Details</label></div><br><br>
+    <input type="text" class="top" id="fname" name="fname" placeholder="Name On Card *" required><br><br>
+    <input type="text" class="input" id="fname" name="fname" placeholder="Credit Card Number *" required><br><br>
+    <input type="text" class="input" id="fname" name="fname" placeholder="Expire date *" required><br><br>
+    <input type="number" class="input" id="fname" name="fname" placeholder="CVV *" required><br>
+    <br>
+    <label for="" >Do you agree to our <span id="tc"> Terms & Conditions</span></label><br>
+    <p class="terms">Yes</p>
+    <input type="checkbox"  class="terms" name="" id="" required>
+    <p  class="terms">No</p>
+    <input type="checkbox"  class="terms" name="" id="">
+    <br>
+    <br>
+
+    <input type="submit" value="Ship Off!" id="ship">
+    <br><br>
+  </form> 
+  
+</div>
+
+<footer>
+    <p>This website was designed By Jason 13538 and ALL copyrights are reserved</p>
+    <hr id="footline">
+    <p id="pages">DIY About Home Brick & Mortar Shop Now</p>
+    <form  onsubmit="message()">
+
+    <label for="">Join Our Newsletter team!</label>
+    <input type="email" name="" id="" required>
+    <input type="submit" value="Join" id="join">
+</form>
+<br>
+</footer>
+
+
+<div id="messagebox">  
+    <p id="message">Thank you for joining our news letter!</p>
+    <button type="button" id="close" onclick="close()">x</button>
+</div>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

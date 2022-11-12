@@ -1,0 +1,533 @@
+body {
+    font-family: 'Humanst521 Lt BT';
+    font-size: 18px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+
+#shop_now{
+    /* margin: auto; */
+    position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+    
+  
+}
+
+#container{
+    display: flex;
+    flex-flow: wrap;
+    gap: 30%;
+    background-color: black;
+    align-items: center;
+}
+
+@media (max-width: 470px) {
+    #container{
+
+        display: flex;
+        gap: 1%;
+        background-color: black;
+        align-items: center;
+    }
+}
+
+.nav{
+    padding-left: 20px;
+}
+
+.media{
+    transition: transform .4s;
+    max-width: 2rem;
+    padding-right: 5px;
+}
+
+.media:hover {
+    transform: scale(1.5);
+}
+
+#name{
+    display:inline-flex;  
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    max-height: 50px;
+}
+
+
+.name{
+    
+    position: relative;
+    font-size: 30px;
+    align-items: center;
+    color: white;
+    font-family: BeteNoirA;
+    /* justify-content: center; */
+}
+
+#rhino{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    max-height: 45px;
+}
+
+.wrap {
+    position: fixed;
+  top: -7px;
+  right:0;
+  z-index: 1;
+}
+
+.toggle{
+    position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  background-color: black;
+}
+
+.hamburger {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.hamburger > div {
+    border: 1px solid black;
+    position: relative;
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    border: inherit;
+
+}
+
+.hamburger > div::after{
+    top: 8px;
+}
+
+
+.toggle:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.toggle:checked + .hamburger > div:before,
+.toggle:checked + .hamburger > div:after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.toggle:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+} 
+
+.toggle:checked ~ .menu {
+    visibility: visible;
+  }
+
+.toggle:checked ~ .menu > ul > li  {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.wrap .menu {
+    position: relative;
+    float: right;
+    top: 5vh;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+  }
+
+
+  @media (max-width: 366px) {
+    .wrap .menu {
+        position: relative;
+        float: right;
+        top: 9vh;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+      }
+}
+
+.menu > ul > li {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+     background-color: black;
+    text-decoration: none;
+    list-style: none;
+    
+
+}
+
+.pages{
+    text-decoration: none;
+    color: white;
+    
+}
+
+#products{
+    background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  background-attachment: scroll;
+}
+
+#now{
+    text-align: center;
+}
+
+#line{
+    width: 50%;
+}
+
+#all{
+    position: relative;
+    left: 10px;
+    display:flex;
+    flex-flow: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+#all > div {
+    max-height: 800px;
+     width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+#sale{
+    display: inline;
+    color: rgb(93, 93, 93);
+    position: relative;
+    left: -10%;
+    display: inline;
+    float: left;
+}
+
+#sale1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.products{
+     display: flex;
+    padding: 4px 4px 0px 4px;
+    min-width: 200px;
+    box-shadow: 1px 1px 3px 1px lightgray;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-items: center;  
+}
+
+.products>img.clothes {
+    max-width: 100%;
+}
+
+
+.trolley{
+    cursor: pointer;
+    position: relative;
+    top: 2%;
+    padding: 10px;
+    width:60px;
+    background-color: gray;
+    border-radius: 50px;
+    margin-top: auto;
+}
+
+
+
+#popup{
+    z-index: 2;
+    border-radius: 5px;
+    position:fixed;
+    top: 40%;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    visibility: hidden;
+    border: 1px solid lightgray;
+    
+}
+
+#exit{
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    font-size: medium;
+    border: none;
+    z-index: 2;
+    background-color: white;
+}
+
+#desk{
+    display: inline-block;
+    max-width: 200px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+
+#limit{
+    display: inline;     
+}
+
+#quantity{
+    margin-right: 10px;
+    border: 1px solid gray ;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 30px;
+    text-align: right;
+    border-radius: 3px;
+}
+
+#amount{
+
+    text-align: center;
+    display: inline;
+    padding-right: 10px;
+    position: relative;
+    margin-left: 10px;   
+    float: right;
+}
+
+#subtotal{
+    display: inline;
+    margin-left: 10px;
+}
+
+
+#submit{
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 7px;
+    float: right;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#reset{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#info{
+    display: flex;
+    border: 1px solid lightgray ;
+    margin-left: 10px;
+    box-shadow: 2px 2px 3px 2px lightgray;
+    padding-left: 2px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+        
+}
+
+
+#box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#text{
+    text-align: center;
+}
+
+
+#form{ 
+    max-width: 800px;
+    margin: auto;
+}
+
+#last{
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgb(235, 245, 253);
+   
+}
+
+.input{
+    width: 80%;
+    min-height: 20px;
+    background-color: azure;
+    border: 1px solid lightgray;
+}
+
+.label{
+    display: inline;
+    font-size: 26px;
+    float: left;
+    position: relative;
+    left: 5.5rem;
+}
+
+.terms{
+    display: inline;
+}
+
+.num{
+    max-height: 10px;
+    padding-bottom: 1px;
+    left: 5rem;
+    display: inline;
+    float: left;
+    position: relative;
+    left: 5rem;
+    top: -1.1rem;
+    border-top: 5px solid black;
+    border-bottom: 12px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-radius:29px 29px 29px 0px;
+    color: white;
+    background-color: black;
+}
+
+.top{
+    width: 80%;
+    min-height: 20px;
+    background-color: azure;
+    border: 1px solid lightgray;
+    position: relative;
+    right: 1rem;
+}
+
+#Special{
+    vertical-align: text-top;
+    width: 80%;
+    max-height: 4rem;
+    background-color: azure;
+    border: 1px solid lightgray;
+}
+
+
+#tc{
+    text-decoration: underline;
+}
+
+#ship{
+    cursor: pointer;
+    width: 87%;
+    height: 3rem;
+    background-color: black;
+    color: white;   
+}
+
+#thanks{
+    overflow-y: hidden;
+}
+
+footer{
+    text-align: center;
+    position: sticky;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#footline{
+    width: 10%;
+}
+
+
+#pages{
+    color: gray;
+}
+
+#join{
+    font-size: 20px;
+    background-color: gray;
+    border: none;
+    height: 2rem;
+}
+
+#messagebox{
+    font-size: 22px;
+    z-index: 2;
+    visibility: hidden;
+    width: 80%;
+    height: 10%;
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#close{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    cursor: pointer;
+    
+}
+

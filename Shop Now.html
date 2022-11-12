@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop Now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+</head>
+<body >
+<div id="shop_now"></div>
+    <div id="container">
+        <div class="nav">
+            <img class="media" src="Facebook.png" alt="Facebook">
+            <img class="media" src="Instagram.png" alt="Instagram">
+            <img class="media" src="Twitter.png" alt="Twitter">
+        </div>
+
+        <div id="name">
+            <p class="name">Nkwali</p>
+            <img id="rhino" class="name" src="Rhino.png" alt="Rhino">
+            <p class="name">Yenkosi</p>
+        </div>
+    
+    
+
+    <div class="wrap">
+            <input type="checkbox" class="toggle">
+        <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <ul>
+                    <li><a class="pages" href="home.html">Home</a></li>
+                    <li><a class="pages" href="About the leather.html">About the leather</a></li>
+                    <li><a class="pages" href="DIY Methods.html">DIY Methods</a></li>
+                    <li><a class="pages" href="Brick & Mortar.html">Brick & Mortar</a></li>
+                    <li><a class="pages" href="Shop Now.html">Shop Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+<img id="products" src="products.jpg" alt="products">
+  
+<h1 id="now">Shop Now!</h1>
+<hr id="line">
+
+<div id="all">
+    <div class="products">
+        <img class="clothes"  src="1.jpg" alt="">
+        <h3 id="p1">BILLY J SPORT SUED LEATHER</h3>
+        <p>Rebels never die.</p>
+        <h2 id="1">R3800.00</h2>
+        <img class="trolley" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('1').innerHTML,document.getElementById('p1').innerHTML)" >
+    </div>
+    <div class="products">
+        <img class="clothes"   src="2.jpg" alt="">
+        <h3 id="p2">BILLY J SNUFF 2 TONE LEATHER</h3>
+        <p>Rebels never die.</p>
+        <h2 id="2">R4200.00</h2>
+        <img class="trolley" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('2').innerHTML,document.getElementById('p2').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="3.jpg" alt="">
+        <h3 id="p3">BJ CLASSIC LEATHER JACKET</h3>
+        <p>Rebels never die.</p>
+        <h2 id="3">R3000.00</h2>
+        <img class="trolley" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('3').innerHTML,document.getElementById('p3').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="4.jpg" alt="">
+        <h3 id="p4">BJ SPORT LEATHER JACKET</h3>
+        <p>Rebels never die.</p>
+        <h2 id="4">R3500.00</h2>
+        <img class="trolley" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('4').innerHTML,document.getElementById('p4').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="5.jpg" alt="">
+        <h3 id="p5">BLACK BJ LEATHER JACKET</h3>
+        <p>Rebels never die.</p>
+        <h2 id="5">R4000.00</h2>
+        <img class="trolley" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('5').innerHTML,document.getElementById('p5').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="6.jpg" alt="">
+        <h3 id="p6">CHOC LEATHER BAG</h3>
+        <p>Rebels never die.</p>
+        <h2 id="6" >R3850.00</h2>
+        <img class="trolley" class="bag" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('6').innerHTML,document.getElementById('p6').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="7.jpg" alt="">
+        <h3 id="p7">BROWN LEATHER BAG</h3>
+        <p>Rebels never die.</p>
+        <div id="sale1">   <s id="sale">R3000</s><h2 id="7" >R2775.00</h2></div> 
+        <img class="trolley" class="bag" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('7').innerHTML,document.getElementById('p7').innerHTML)">
+    </div>
+    <div class="products">
+        <img class="clothes"   src="8.jpg" alt="">
+        <h3 id="p8">SA BIKER JACKET</h3>
+        <p>Rebels never die.</p>
+        <h2 id="8"  >R3950.00</h2>
+        <img class="trolley" class="bag" src="Trolley.png" alt="Trolley" onclick="popup(document.getElementById('8').innerHTML,document.getElementById('p8').innerHTML)">
+    </div>
+
+
+</div>
+
+<br><br>
+
+
+
+
+<footer>
+    <p>This website was designed By Jason 13538 and ALL copyrights are reserved</p>
+    <hr id="footline">
+    <p id="pages">DIY About Home Brick & Mortar Shop Now</p>
+    <form  onsubmit="message()">
+
+    <label for="">Join Our Newsletter team!</label>
+    <input type="email" name="" id="" required>
+    <input type="submit" value="Join" id="join">
+</form>
+<br>
+</footer>
+
+
+<div id="box">
+<div id="popup">
+    <button type="button" id="exit" onclick="exit()">x</button>
+    <br>
+    <form action="">
+        <div id="info">
+        <div id="limit">
+        <label for="quantity" id="desk"></label>
+        </div>
+        <input type="number" id="quantity" name="quantity" value="1"  oninput="subtotal()" onclick="this.select()">
+        <input type="reset" value="x" id="reset" onmouseout="subtotal()">
+        <p id="amount"></p>
+        </div>
+        
+        <p id="subtotal">Subtotal:</p>
+        <button type="button" id="submit" onclick="checkout()">Check out</button>
+      </form>
+      
+</div>
+</div>
+
+
+
+
+<div id="messagebox">  
+    <p id="message">Thank you for joining our news letter!</p>
+    <button type="button" id="close" onclick="close()">x</button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
